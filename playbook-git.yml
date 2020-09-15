@@ -1,0 +1,31 @@
+---
+
+- name: Ensure git installed
+  hosts: all
+  tags: [ 'install-git' ]
+  tasks:
+  - package: name=git state=latest
+    become: yes
+
+- name: Ensure ~/.gitconfig copied from master.gitconfig
+  hosts: all
+  tasks:
+  
+  - name: first show no config in targets
+    command: git config --global --list
+    ignore_errors: yes
+    register: git_config_before
+
+  - name: show git config output always - verbosity 0 is default for debug module
+    debug: var=git_config_before
+
+  - name: tried and true copy module with master.gitconfig 
+    copy: src=master.gitconfig dest=~/.gitconfig
+
+  - name: show newly added config
+    command: git config --global --list
+    ignore_errors: yes
+    register: git_config_after
+
+  - name: ensure to show git config after with debug - this time only show stdout_lines
+    debug: var=git_config_after.stdout_lines
