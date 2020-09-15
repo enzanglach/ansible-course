@@ -3,5 +3,7 @@ vmdeb9-oyptkyhnnmccs.westeurope.cloudapp.azure.com
 vmdeb10-oyptkyhnnmccs.westeurope.cloudapp.azure.com
 
 [ubuntu]
-vmubuntu16-oyptkyhnnmccs.westeurope.cloudapp.azure.com
 vmubuntu18-oyptkyhnnmccs.westeurope.cloudapp.azure.com
+
+[centos]
+vmcentos8-oyptkyhnnmccs.westeurope.cloudapp.azure.com
