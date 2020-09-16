@@ -7,3 +7,6 @@ vmubuntu18-oyptkyhnnmccs.westeurope.cloudapp.azure.com
 
 [centos]
 vmcentos8-oyptkyhnnmccs.westeurope.cloudapp.azure.com
+
+[all:vars]
+ansible_user=azureuser
