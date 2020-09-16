@@ -12,7 +12,7 @@
   tasks:
   
   - name: first show no config in targets
-    command: git config --global --list
+    git_config: list_all=yes scope=global
     ignore_errors: yes
     register: git_config_before
 
@@ -23,9 +23,9 @@
     copy: src=master.gitconfig dest=~/.gitconfig
 
   - name: show newly added config
-    command: git config --global --list
+    git_config: list_all=yes scope=global
     ignore_errors: yes
     register: git_config_after
 
-  - name: ensure to show git config after with debug - this time only show stdout_lines
-    debug: var=git_config_after.stdout_lines
+  - name: ensure to show git config after with debug - this time only show config_values
+    debug: var=git_config_after.config_values
