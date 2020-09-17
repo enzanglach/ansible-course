@@ -20,3 +20,10 @@ ansible -m setup -a "filter=ansible_pkg_mgr" -u azureuser all
 
 ansible-playbook playbook-git.yml -u azureuser
 
+## Run a docker image to install Ansible and play with ansible-console
+
+docker run --rm -it python bash
+
+## Connect to a container named ansible_container_test1 and start bash
+
+docker container exec -it ansible_container_test1 bash
