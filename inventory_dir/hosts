@@ -1,12 +1,9 @@
 [debian]
-vmdeb9-oyptkyhnnmccs.westeurope.cloudapp.azure.com
-vmdeb10-oyptkyhnnmccs.westeurope.cloudapp.azure.com
+vmdeb9-oyptkyhnnmccs.westeurope.cloudapp.azure.com ansible_user=azureuser
+vmdeb10-oyptkyhnnmccs.westeurope.cloudapp.azure.com ansible_user=azureuser
 
 [ubuntu]
-vmubuntu18-oyptkyhnnmccs.westeurope.cloudapp.azure.com
+vmubuntu18-oyptkyhnnmccs.westeurope.cloudapp.azure.com ansible_user=azureuser
 
 [centos]
-vmcentos8-oyptkyhnnmccs.westeurope.cloudapp.azure.com
-
-[all:vars]
-ansible_user=azureuser
+vmcentos8-oyptkyhnnmccs.westeurope.cloudapp.azure.com ansible_user=azureuser
